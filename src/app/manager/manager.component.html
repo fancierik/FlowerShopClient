@@ -1,0 +1,153 @@
+<body>
+<div class="navbar">
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div class="toolbar no-select" routerLink="/client">
+        <span>FlowerBar</span>
+      </div>
+      <span class="example-spacer"></span>
+      <div class="toolbar no-select">
+
+        <button mat-icon-button class="example-icon" routerLink="/client">
+          <mat-icon>store</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" (click)="openDialogUser('30ms', '30ms')">
+          <mat-icon>group</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" (click)="openDialogAdd('30ms', '30ms')">
+          <mat-icon>post_add</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class=wrapper>
+  <div class="headblock">
+    <h1>Заказы</h1>
+  </div>
+
+  <div class="order">
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Изменить статус заказа
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>номер заказа</mat-label>
+          <input name="numberOrderInput" [(ngModel)]="numberOrder" matInput>
+        </mat-form-field>
+        <div>
+          <label id="example-radio-group-label">Статус</label>
+          <mat-radio-group
+            aria-labelledby="example-radio-group-label"
+            class="example-radio-group"
+            [(ngModel)]="status">
+            <mat-radio-button class="example-radio-button" *ngFor="let statusitem of statuslist" [value]="statusitem">
+              {{statusitem}}
+            </mat-radio-button>
+          </mat-radio-group>
+        </div>
+      </div>
+
+      <button mat-raised-button color="primary" (click)="SendStatusBtn()">Изменить статус</button>
+    </mat-expansion-panel>
+  </div>
+
+<div class="order">
+  <mat-expansion-panel hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Удалить заказ
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Номер заказа</mat-label>
+        <input name="numberOrderInput" [(ngModel)]="numberOrder" matInput>
+      </mat-form-field>
+    </div>
+    <button mat-raised-button color="primary" (click)=" SendStatusBtnelete()">Удалить заказ</button>
+  </mat-expansion-panel>
+</div>
+
+<!--  <div class="order">-->
+<!--    <mat-expansion-panel hideToggle>-->
+<!--      <mat-expansion-panel-header>-->
+<!--        <mat-panel-title>-->
+<!--Изменить дату доставки-->
+<!--        </mat-panel-title>-->
+<!--      </mat-expansion-panel-header>-->
+<!--      <div>-->
+<!--        <mat-form-field appearance="outline">-->
+<!--          <mat-label>Номер заказа</mat-label>-->
+<!--          <input name="numberOrderInput" [(ngModel)]="numberOrder" matInput>-->
+<!--        </mat-form-field>-->
+<!--      </div>-->
+<!--      <p>Выберите дату доставки</p>-->
+<!--      <input id="ToSS" type="datetime-local">-->
+<!--      <button mat-raised-button color="primary" (click)="SendStatusBtn()">Изменить дату</button>-->
+<!--    </mat-expansion-panel>-->
+<!--  </div>-->
+  <div class="table">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+      <!--- Note that these columns can be defined in any order.
+            The actual rendered columns are set as a property on the row definition" -->
+
+      <!-- Position Column -->
+      <ng-container matColumnDef="numberofOrder">
+        <th mat-header-cell *matHeaderCellDef>Заказ</th>
+        <td mat-cell *matCellDef="let element"> {{element.numberofOrder}} </td>
+      </ng-container>
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="dateofOrder">
+        <th mat-header-cell *matHeaderCellDef>Дата заказа</th>
+        <td mat-cell *matCellDef="let element"> {{element.dateofOrder}} </td>
+      </ng-container>
+      <!-- Weight Column -->
+      <ng-container matColumnDef="dateofArrive">
+        <th mat-header-cell *matHeaderCellDef>Дата доставки</th>
+        <td mat-cell *matCellDef="let element"> {{element.dateofArrive}} </td>
+      </ng-container>
+      <ng-container matColumnDef="fio">
+        <th mat-header-cell *matHeaderCellDef>ФИО клиента</th>
+        <td mat-cell *matCellDef="let element"> {{element.fio}} </td>
+      </ng-container>
+      <ng-container matColumnDef="comment">
+        <th mat-header-cell *matHeaderCellDef>Способ получения</th>
+        <td mat-cell *matCellDef="let element"> {{element.comment}} </td>
+      </ng-container>
+      <ng-container matColumnDef="numberofPay">
+        <th mat-header-cell *matHeaderCellDef>Оплата</th>
+        <td mat-cell *matCellDef="let element"> {{element.numberofPay}} </td>
+      </ng-container>
+      <ng-container matColumnDef="statuss">
+        <th mat-header-cell *matHeaderCellDef>Статус</th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+      </ng-container>
+<!--      <ng-container matColumnDef="CartList">-->
+<!--        <th mat-header-cell *matHeaderCellDef>Заказ</th>-->
+<!--        <td mat-cell *matCellDef="let element"> {{element.CartList}} </td>-->
+<!--      </ng-container>-->
+      <ng-container matColumnDef="adress">
+        <th mat-header-cell *matHeaderCellDef>Адрес</th>
+        <td mat-cell *matCellDef="let element"> {{element.adress}} </td>
+      </ng-container>
+      <ng-container matColumnDef="namee">
+        <th mat-header-cell *matHeaderCellDef>Наименование</th>
+        <td mat-cell *matCellDef="let element"> {{element.namee}} </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+
+  </div>
+</div>
+

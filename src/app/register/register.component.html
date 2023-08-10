@@ -1,0 +1,68 @@
+<html><body>
+<div class="navbar">
+  <mat-toolbar >
+    <mat-toolbar-row>
+      <div class="toolbar no-select" routerLink="/client">
+        <span>FlowerBar</span>
+      </div>
+      <span class="example-spacer"></span>
+      <div class="toolbar no-select">
+        <button mat-icon-button class="example-icon" routerLink="/client">
+          <mat-icon>store</mat-icon>
+        </button>
+        <button mat-icon-button class="example-icon" routerLink="/login">
+          <mat-icon>login</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</div>
+
+<div class="container-wrapper">
+  <div class="container" >
+    <span class="title"><br/><h1 class="font1">Регистрация</h1></span>
+    <div class="inputs">
+      <div class="wrapper">
+        <mat-form-field appearance="outline">
+          <mat-label>Логин</mat-label>
+          <input name="loginInput" [(ngModel)]="login" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Пароль</mat-label>
+          <input type="password" name="passInput" [(ngModel)]="password" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Фамилия</mat-label>
+          <input [(ngModel)]="secondName" matInput>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>Имя</mat-label>
+          <input [(ngModel)]="name" matInput>
+        </mat-form-field>
+<!--      </div>-->
+<!--      <div class="wrapper">-->
+        <mat-form-field appearance="outline">
+          <mat-label>Email</mat-label>
+          <input [(ngModel)]="email" matInput>
+        </mat-form-field>
+        <div class="link-btns">
+          <button mat-raised-button color="primary" routerLink="/login" (click)="RegisterBtn()">Зарегистрироваться</button>
+          <a mat-raised-button class="button-margin" routerLink="/login">Вход</a>
+
+        </div>
+    </div>
+
+  </div>
+
+</div>
+</div>
+<div  class="card2">
+  <article class="font">
+    <br/>
+    <h1 style="margin-left: 45%;">FLOWERBAR</h1>
+    <span style="margin-left: 300px; font-size: 16px">Адрес: ул.Комсомольская, д.24</span>
+    <span style="margin-left: 350px; font-size: 16px">Телефон: 8(912)828-99-05<br/></span>
+    <br/>
+  </article>
+</div>
+</body></html>

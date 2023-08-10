@@ -1,0 +1,100 @@
+<h1 mat-dialog-title xmlns="http://www.w3.org/1999/html">Cделать заявку на добвление товара</h1>
+<div mat-dialog-content>
+  <p>Добавить товар:</p>
+
+
+
+<mat-form-field style=" width: 350px; " >
+
+  <mat-label>Выберите наименование</mat-label>
+  <mat-select name="name" [(ngModel)]="name" matInput>
+
+  <mat-card style="width: 250px; margin-left: 15% ">
+    <mat-card-title>Розы</mat-card-title>
+    <mat-form-field appearance="fill">
+      <mat-label>Выберите цвет</mat-label>
+      <mat-select>
+        <mat-option value="Красные розы" tex>Красные розы</mat-option>
+        <mat-option value="Розовые розы">Розовые розы</mat-option>
+        <mat-option value="Желтые розы">Желтые розы</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+  </mat-card>
+
+    <mat-card style="width: 250px; margin-left: 15%; margin-top: 3% ">
+      <mat-card-title>Зелень</mat-card-title>
+      <mat-form-field appearance="fill">
+        <mat-label>Выберите тип зелени</mat-label>
+        <mat-select>
+          <mat-option value="Вакс">Вакс</mat-option>
+          <mat-option value="Эвкалипт">Эвкалипт</mat-option>
+          <mat-option value="Рускус">Рускус</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+
+    <mat-card style="width: 250px; margin-left: 15%; margin-top: 3% ">
+      <mat-card-title>Герберы</mat-card-title>
+      <mat-form-field appearance="fill">
+        <mat-label>Выберите цвет </mat-label>
+        <mat-select>
+          <mat-option value="Кремовые герберы">Кремовые герберы</mat-option>
+          <mat-option value="Желтые герберы">Желтые герберы</mat-option>
+          <mat-option value="Красные герберы">Красные герберы</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+
+    <mat-card style="width: 250px; margin-left: 15%; margin-top: 3% ">
+      <mat-card-title>Хризантемы</mat-card-title>
+      <mat-form-field appearance="fill">
+        <mat-label>Выберите тип </mat-label>
+        <mat-select>
+          <mat-option value="Махровые хризантемы">Махровые хризантемы</mat-option>
+          <mat-option value="Анастасия">Анастасия</mat-option>
+          <mat-option value="Ромашковые хризантемы">Ромашковые хризантемы</mat-option>
+          <mat-option value="Цветные хризантемы">Цветные хризантемы</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+
+    <mat-card style="width: 250px; margin-left: 15%; margin-top: 3% ">
+      <mat-card-title>Тюльпаны</mat-card-title>
+      <mat-form-field appearance="fill">
+        <mat-label>Выберите цвет</mat-label>
+        <mat-select>
+          <mat-option value="Желтые тюльпаны">Желтые тюльпаны</mat-option>
+          <mat-option value="Красные тюльпаны">Красные тюльпаны</mat-option>
+          <mat-option value="Белые тюльрпаны">Белые тюльрпаны</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+
+    <mat-card style="width: 250px; margin-left: 15%; margin-top: 3% ">
+      <mat-card-title>Лилии</mat-card-title>
+      <mat-form-field appearance="fill">
+        <mat-label>Выберите тип зелени</mat-label>
+        <mat-select>
+          <mat-option value="Розовые лилии">Розовые лилии</mat-option>
+          <mat-option value="Белые лилии">Белые лилии</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </mat-card>
+  </mat-select>
+</mat-form-field>
+
+
+
+<mat-form-field appearance="outline" style="width: 350px">
+  <mat-label>Комментарий/Cсылка на изображение</mat-label>
+  <input  name="description" [(ngModel)]="description" matInput>
+</mat-form-field>
+  <mat-form-field appearance="outline" style="width: 350px">
+    <mat-label>Цена</mat-label>
+    <input name="price" [(ngModel)]="price" matInput>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button mat-dialog-close style="margin-left: 35%" color="primary" cdkFocusInitial (click)="Add()">подтвердить</button>
+</div>

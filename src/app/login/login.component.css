@@ -1,0 +1,95 @@
+.navbar {
+  overflow: hidden;
+  /*background-color: #333;*/
+  position: fixed; /* Установите навигационную панель в фиксированное положение */
+  top: 0; /* Расположите навигационную панель в верхней части страницы */
+  width: 100%; /* Полная ширина */
+  z-index:99999999;
+}
+
+.mat-toolbar.mat-primary {
+  position: fixed;
+  background: rgba(104, 166, 7, 0.37);
+  color: #ffffff;
+}
+.font{
+  background: white;
+}
+.card2 {
+  /*margin-top: 2%;*/
+  padding: 60px;
+  background-image: url("https://img.freepik.com/free-vector/green-leaf-design-element-set-on-a-beige-background-vector_53876-118061.jpg?w=1380&t=st=1681168798~exp=1681169398~hmac=3ecf0a30454bba592ed91b55c6633d60a8be18ab086be03f9d9d385cea009819");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 2%;
+}
+.mat-toolbar{
+  background: rgba(104, 166, 7, 0.37);
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.toolbar{
+  display: flex;
+  align-self: center;
+}
+.no-select {
+  cursor:pointer;
+  user-select: none;
+}
+
+.wrapper {
+  position: relative;
+  height: 69vh;
+  top: 10em;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper2 {
+  position: relative;
+  height: 100vh;
+  top: 10em;
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  overflow: hidden;
+  /*background-color: white;*/
+  position: fixed; /* Установите навигационную панель в фиксированное положение */
+  top: 0; /* Расположите навигационную панель в верхней части страницы */
+  width: 100%; /* Полная ширина */
+  z-index:99999999;
+}
+
+.mat-toolbar.mat-primary {
+  position: fixed;
+  background: rgba(104, 166, 7, 0.37);
+  color: #ffffff;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.toolbar{
+  display: flex;
+  align-self: center;
+}
+.no-select {
+  cursor:pointer;
+  user-select: none;
+}
+.link-btns {
+  display: flex;
+  justify-content: space-between;
+}
+.form {
+  margin-top: 10px;
+}
+
+.togle {
+  margin-bottom: 10px;
+}

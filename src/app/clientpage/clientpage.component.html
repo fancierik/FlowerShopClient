@@ -1,0 +1,192 @@
+<html>
+<body>
+<div class="navbar">
+  <mat-toolbar >
+    <mat-toolbar-row>
+      <div class="toolbar no-select" routerLink="/client">
+        <span>FlowerBar</span>
+      </div>
+      <span class="example-spacer"></span>
+      <div class="toolbar no-select">
+        <button mat-icon-button class="example-icon" (click)="openDialogInfo('30ms', '30ms')">
+          <mat-icon>help</mat-icon>
+        </button>
+
+        <button mat-icon-button class="example-icon" (click)="openDialogCart('30ms', '30ms')">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+</div>
+<div class="wrapper">
+  <div  class="card">
+  <article class="font">
+    <br/>
+    <p style="margin-left: 45%;">FLOWERBAR</p>
+    <span style="margin-left: 300px; font-size: 16px">Адрес: ул.Комсомольская, д.24</span>
+    <span style="margin-left: 350px; font-size: 16px; ">Телефон: 8(912)828-99-05<br/></span>
+
+    <br/>
+  </article>
+</div>
+<!--  <mat-tab-group style="margin-top: 4%">-->
+<!--    <mat-tab label="Каталог">-->
+
+      <div class="block">
+
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title id="name">Авторский букет Нежный</mat-card-title>
+              <mat-card-subtitle id="price">2 730 pуб.</mat-card-subtitle>
+              <mat-card-subtitle id="but"><button mat-raised-button id="but1" style="width: 110px; margin-right: 10px; margin-top: 35%; background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but"  (click)="Thing1Btn(); saveloc()" >В корзину</button></mat-card-subtitle>
+              <img mat-card-xl-image src="https://sun9-25.userapi.com/impg/vj2sd7xLWtIzKY9_4PqbBwkvXhZ5gZsXeAU59Q/YLYDQt5vc2o.jpg?size=2000x2000&quality=96&sign=4be7cf4ac6508d2263682b572708505a&type=album" >
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            <br/>
+            Пионовидная роза Kahala 50 см - 3, Роза розовая 50см - 2, Кустовая роза 50см - 6, упаковка, Лента, Фисташка
+          </mat-card-content>
+        </mat-card>
+
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title>Пудровые розы</mat-card-title>
+              <mat-card-subtitle>3 000 pуб.</mat-card-subtitle>
+              <mat-card-subtitle><button mat-raised-button style="width: 110px; margin-right: 10px; margin-top: 60%; background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but" (click)="Thing2Btn(); saveloc()">В корзину</button></mat-card-subtitle>
+              <img mat-card-xl-image src="https://sun9-73.userapi.com/impg/rQqCyEgy16eCZ3p9hLNUsne-sJNkRdHAns70XQ/WeFb0N5iVFU.jpg?size=1280x1280&quality=95&sign=6cf7839ff1712071d8bbdfeb3379535f&type=album" >
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            <br/>
+            Роза пудровая 50 см. (Россия) - 11 шт. Упаковка, Лента
+          </mat-card-content>
+        </mat-card>
+
+
+
+        <mat-card class="example-card">
+          <mat-card-header>
+            <mat-card-title-group>
+              <mat-card-title>Ромашки</mat-card-title>
+              <mat-card-subtitle>2 000 pуб.</mat-card-subtitle>
+              <mat-card-subtitle><button mat-raised-button style="width: 110px; margin-right: 10px; margin-top: 85%; background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but"  (click)="Thing3Btn(); saveloc()">В корзину</button></mat-card-subtitle>
+              <img mat-card-xl-image src="https://sun9-79.userapi.com/impg/HcrID8iijJ3B2j7Lth8axVhgYN_yPVXbrdqJlg/4JFRXYGwSuE.jpg?size=1125x1198&quality=96&sign=95c4d4cb84ae8d9c37cd7e0f4c011bc5&type=album" >
+            </mat-card-title-group>
+          </mat-card-header>
+          <mat-card-content>
+            <br/>
+            Гипсофила - 5, Танацетум - 4, Лента, упаковка
+          </mat-card-content>
+        </mat-card>
+      </div>
+  <div class="block">
+
+    <mat-card class="example-card2">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Эвкалипт</mat-card-title>
+          <mat-card-subtitle>200 pуб.</mat-card-subtitle>
+          <mat-card-subtitle><button mat-raised-button style="width: 110px; margin-right: 10px; margin-top: 85%;  background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but"  (click)="Thing4Btn(); saveloc()">В корзину</button></mat-card-subtitle>
+          <img mat-card-xl-image src="https://sun9-32.userapi.com/impg/p9Q14RU2zTx4CB3Q0g75HmdcCdKO4G0B2Lgxdg/kiuS7iOyfZs.jpg?size=960x1280&quality=95&sign=683980d6650d24eca85116f08d540754&type=album" >
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <br/>
+        Ароматный эвкалипт
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card2">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Букет с гортензией</mat-card-title>
+          <mat-card-subtitle>3 320 pуб.</mat-card-subtitle>
+          <mat-card-subtitle><button mat-raised-button style="width: 110px; margin-right: 10px; margin-top: 50%; background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but"  (click)="Thing5Btn(); saveloc()">В корзину</button></mat-card-subtitle>
+          <img mat-card-xl-image src="https://sun9-13.userapi.com/impg/l8aEz7a1CLY3QfePR4aYCYRQBFo0Z6Iijf_CRQ/I9fJ5aqAvEg.jpg?size=960x1109&quality=95&sign=fff1e76981b31772c5d4ecaec5703ab0&type=album" >
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <br/>Гортензия - 3 шт. Хризантема кустовая сталион - 3 шт. Добавления - Фисташка, Сизаль, Лента
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card2">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Авторский букет пудровый</mat-card-title>
+          <mat-card-subtitle>4 000 pуб.</mat-card-subtitle>
+          <mat-card-subtitle><button mat-raised-button style="width: 110px; margin-right: 10px; margin-top: 35%;  background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but"  (click)="Thing6Btn(); saveloc()">В корзину</button></mat-card-subtitle>
+          <img mat-card-xl-image src="https://sun9-69.userapi.com/impg/XNV94JXxC18iUpZv8bPNAx5bWSTPFZdy9tRycg/uXhiF7Aa2Pw.jpg?size=960x987&quality=95&sign=e6e20d9b9934f3f4a54c55cc54523dda&type=album" >
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <br/>
+        Ранункулюс - 1 шт. Роза Эквадор, Пудровая 50 см - 3 шт. Роза белая 50см - 2 шт. Гвоздики - 3 шт. Маттиола - 3 шт. Лизиантус - 1 шт. Альстромерии - 2 шт. Упаковка Лента
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="block">
+
+    <mat-card class="example-card2">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Солнечный</mat-card-title>
+          <mat-card-subtitle>3 500 pуб.</mat-card-subtitle>
+          <mat-card-subtitle><button mat-raised-button style="width: 110px; margin-right: 10px; margin-top: 85%; background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but"  (click)="Thing7Btn(); saveloc()">В корзину</button></mat-card-subtitle>
+          <img mat-card-xl-image src="https://sun9-3.userapi.com/impg/wJ4CT1kU0_IiFKwpJwsgKoWgXDd0LKQNg9z3wA/Ic3EQ_IsFF0.jpg?size=960x1098&quality=95&sign=d4442d8ede7f6a851f6f008451a14320&type=album" >
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <br/>
+        Тюльпан - 15, Мимоза, упаковка, Лента
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card2">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Облако</mat-card-title>
+          <mat-card-subtitle>2 260 pуб.</mat-card-subtitle>
+          <mat-card-subtitle><button mat-raised-button style="width: 110px; margin-right: 10px; margin-top: 85%;  background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but"  (click)="Thing8Btn(); saveloc()">В корзину</button></mat-card-subtitle>
+          <img mat-card-xl-image src="https://sun9-50.userapi.com/impg/KQ1ILAE6h_bzk1Jytd2p8mEJLn-ci5rzHbH7KA/fnwKDiyyKcE.jpg?size=1280x1280&quality=95&sign=ddcd0daf49c5dfcffe618cd6fa451f45&type=album" >
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <br/>
+        Хризантема кустовая - 5 шт. Упаковка, Лента
+      </mat-card-content>
+    </mat-card>
+
+    <mat-card class="example-card2">
+      <mat-card-header>
+        <mat-card-title-group>
+          <mat-card-title>Тюльпаны</mat-card-title>
+          <mat-card-subtitle>1 000 pуб.</mat-card-subtitle>
+          <mat-card-subtitle><button mat-raised-button style="width: 110px; margin-right: 10px; margin-top: 60%; background: rebeccapurple; color: white " onclick="this.style.background='grey'" class="example-card-but" (click)="Thing2Btn(); saveloc()">В корзину</button></mat-card-subtitle>
+          <img mat-card-xl-image src="https://sun9-16.userapi.com/impg/DRESbT-T7tHH9FuCXo5CJHPMFa35489GcBzc2Q/pycJQpQKhSU.jpg?size=960x1280&quality=96&sign=941060a4156ba10a7a41e5b34084e4f4&type=album" >
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <br/>
+        Тюльпан - 13 шт. упаковка, лента
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div  class="card2">
+    <article class="font">
+      <br/>
+      <h1 style="margin-left: 45%;">FLOWERBAR</h1>
+      <span style="margin-left: 300px; font-size: 16px">Адрес: ул.Комсомольская, д.24</span>
+      <span style="margin-left: 350px; font-size: 16px">Телефон: 8(912)828-99-05<br/></span>
+      <br/>
+    </article>
+  </div>
+</div>
+</body>
+</html>

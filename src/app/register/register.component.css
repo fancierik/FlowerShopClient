@@ -1,0 +1,81 @@
+.navbar {
+  overflow: hidden;
+  /*background-color: #333;*/
+  position: fixed; /* Установите навигационную панель в фиксированное положение */
+  top: 0; /* Расположите навигационную панель в верхней части страницы */
+  width: 100%; /* Полная ширина */
+  z-index:99999999;
+}
+.mat-toolbar{
+  background: rgba(104, 166, 7, 0.37);
+}
+
+.mat-toolbar.mat-primary {
+  position: fixed;
+  background: rgb(255, 255, 255);
+  color: #ffffff;
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.card2 {
+  /*margin-top: 2%;*/
+  padding: 60px;
+  background-image: url("https://img.freepik.com/free-vector/green-leaf-design-element-set-on-a-beige-background-vector_53876-118061.jpg?w=1380&t=st=1681168798~exp=1681169398~hmac=3ecf0a30454bba592ed91b55c6633d60a8be18ab086be03f9d9d385cea009819");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.font{
+  background: white;
+}
+.toolbar{
+  display: flex;
+  align-self: center;
+}
+.no-select {
+  cursor:pointer;
+  user-select: none;
+}
+.font1{
+  margin-left: 45%;
+}
+
+.wrapper {
+  position: relative;
+  /*margin: 0 20px;*/
+  display: flex;
+  flex-direction: column;
+ margin-left: 40%;
+}
+.link-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 4em;
+}
+
+.container-wrapper {
+  height: 77vh;
+  overflow: hidden;
+}
+.inputs {
+  display: flex;
+}
+
+.radio {
+  display: flex;
+  flex-direction: column;
+}
+
+.example-margin {
+  margin: 10px 0;
+}
+
+.button-margin {
+  margin: 0 20px;
+}

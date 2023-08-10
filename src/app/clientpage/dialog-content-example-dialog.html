@@ -1,0 +1,57 @@
+<h1 mat-dialog-title>Оформление заказа</h1>
+<div mat-dialog-content>
+<p>Итоговая сумма: {{summ}}</p>
+  <p>Наименование товара {{nameee}}</p>
+<h4>Введите свои учетные данные:</h4>
+  <button mat-raised-button mat-dialog-close color="primary" class="button" routerLink="/register" style="height:80%">Если нет учетной записи, то зарегистритруйтесь</button>
+  <h4></h4>
+  <mat-form-field appearance="outline">
+      <mat-label>Логин</mat-label>
+      <input name="LoginField" [(ngModel)]="LoginField" matInput>
+    </mat-form-field>
+  <mat-form-field appearance="outline">
+    <mat-label>Пароль</mat-label>
+    <input type="password" name="PasswordField" [(ngModel)]="PasswordField" matInput>
+  </mat-form-field>
+
+  <mat-form-field appearance="outline">
+    <mat-label>Электронная почта</mat-label>
+    <input  name="EmailField" [(ngModel)]="email" matInput>
+  </mat-form-field>
+  <h4>Выберите способ получения:</h4>
+  <mat-radio-group
+    aria-labelledby="example-radio-group-label"
+    class="example-radio-group"
+    [(ngModel)]="status">
+    <mat-radio-button class="example-radio-button" *ngFor="let statusitem of statuslist" [value]="statusitem">
+      {{statusitem}}
+    </mat-radio-button>
+  </mat-radio-group>
+  <mat-form-field appearance="outline">
+    <mat-label>Адрес доставки</mat-label>
+    <input name="AdressField" [(ngModel)]="AdressField" matInput>
+  </mat-form-field>
+  <p>Выберите дату доставки</p>
+  <input id="ToSS" type="datetime-local">
+  <h4></h4>
+  <h4>Данные для оплаты:</h4>
+  <mat-form-field appearance="outline">
+    <mat-label>номер карты</mat-label>
+    <input name="CardNumberField" [(ngModel)]="CardNumberField" matInput>
+  </mat-form-field>
+<!--  <mat-form-field appearance="outline">-->
+<!--    <mat-label>Срок действия карты</mat-label>-->
+<!--    <input name="CardNumberField" [(ngModel)]="dateOfRecive" matInput>-->
+<!--  </mat-form-field>-->
+  <mat-form-field appearance="outline">
+    <mat-label>CVV</mat-label>
+    <input type="password" name="CVVFiled" [(ngModel)]="CVVField" matInput>
+  </mat-form-field>
+
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close  color="primary" class="button" cdkFocusInitial (click)="CreateOrder()">Подтвердить</button>
+  <button mat-button mat-dialog-close>Отменить</button>
+
+</div>

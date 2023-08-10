@@ -1,0 +1,53 @@
+<div class="navbar">
+  <mat-toolbar >
+    <mat-toolbar-row>
+      <div class="toolbar no-select" routerLink="/client">
+        <span>FlowerBar</span>
+      </div>
+      <span class="example-spacer"></span>
+      <div class="toolbar no-select">
+        <button mat-icon-button class="example-icon" routerLink="/client"  onclick="history.back()">
+          <mat-icon>store</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+
+</div>
+
+<div class="container" >
+  <div class="wrapper">
+    <span class="title"><h1>Вход</h1></span>
+    <br/>
+    <mat-form-field appearance="outline">
+      <mat-label>Логин</mat-label>
+      <input name="loginInput" [(ngModel)]="login" matInput>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Пароль</mat-label>
+      <input type="password" name="passInput" [(ngModel)]="pass" matInput>
+    </mat-form-field>
+    <mat-slide-toggle (change)="doctorCheck = !doctorCheck" class="togle" color="primary">Мэнеджер</mat-slide-toggle>
+    <div class="link-btns">
+      <button mat-raised-button color="primary" (click)="LoginBtn()">Войти</button>
+      <a mat-raised-button routerLink="/register">Регистрация</a>
+
+    </div>
+
+  </div>
+<!--  <div class="wrapper">-->
+    <div  class="card2">
+    <article class="font">
+      <br/>
+      <h1 style="margin-left: 45%;">FLOWERBAR</h1>
+      <span style="margin-left: 300px; font-size: 16px">Адрес: ул.Комсомольская, д.24</span>
+      <span style="margin-left: 350px; font-size: 16px">Телефон: 8(912)828-99-05<br/></span>
+      <br/>
+    </article>
+  </div>
+  </div>
+
+<!--</div>-->
+
+<router-outlet></router-outlet>
